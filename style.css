@@ -1,0 +1,198 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f8f8; /* Latar belakang sedikit lebih terang */
+    overflow: hidden; /* Mencegah scrollbar */
+}
+
+/* Container untuk seluruh layout */
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Top Section (Warna Ungu Muda yang Lebih Lembut) */
+.top-section {
+    background-color: #A38ED8; /* Ungu yang lebih lembut/pastel */
+    flex: 2.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    text-align: center; /* Pastikan teks di tengah */
+}
+
+.main-title {
+    font-size: 3.8em; /* Ukuran teks lebih besar */
+    margin-bottom: 15px; /* Jarak bawah */
+    font-weight: 700; /* Lebih tebal */
+    color: #2c3e50; /* Warna teks biru gelap (lebih elegan dari abu-abu tua) */
+    line-height: 1.1; /* Jarak antar baris */
+    letter-spacing: -0.02em; /* Sedikit rapat antar huruf */
+}
+
+.subtitle {
+    font-size: 2em; /* Ukuran sub-judul lebih besar */
+    margin-bottom: 10px; /* Jarak bawah */
+    font-weight: 600; /* Sedikit lebih tebal */
+    color: #34495e; /* Warna teks biru gelap */
+}
+
+.tagline {
+    font-size: 1.6em; /* Ukuran tagline lebih besar */
+    color: #5d6d7e; /* Warna teks abu-abu kebiruan */
+    margin-top: 15px; /* Jarak atas */
+    font-weight: 400; /* Normal */
+}
+
+/* Stiker / Ikon di Bagian Atas */
+.icon-container {
+    position: absolute;
+    top: 20px; /* Posisi relatif ke top-section */
+    left: 20px; /* Posisi relatif ke top-section */
+    display: flex;
+    gap: 15px; /* Jarak antar ikon */
+    z-index: 10; /* Pastikan di atas elemen lain */
+}
+
+.icon-container .icon {
+    font-size: 2.5em; /* Ukuran ikon */
+    color: #f0f0f0; /* Warna ikon putih keabu-abuan */
+    opacity: 0.7;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sedikit bayangan */
+}
+/* Ikon di sisi berlawanan */
+.icon-container.right {
+    left: auto;
+    right: 20px;
+}
+
+
+/* Bottom Section (Putih Bersih) */
+.bottom-section {
+    background-color: #ffffff; /* Putih bersih */
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Menggunakan kolom untuk memusatkan lebih baik */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Start Button (Gradient Lebih Menarik) */
+.start-button {
+    background: linear-gradient(45deg, #7ad277, #4CAF50); /* Gradient hijau */
+    color: white;
+    padding: 18px 60px; /* Ukuran tombol lebih besar */
+    border: none;
+    border-radius: 40px; /* Sudut lebih membulat */
+    font-size: 1.4em; /* Teks tombol lebih besar */
+    font-weight: 600; /* Lebih tebal */
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4); /* Bayangan lebih jelas dengan warna hijau */
+    transition: all 0.3s ease;
+    text-transform: uppercase; /* Huruf kapital */
+    letter-spacing: 0.05em; /* Sedikit jarak antar huruf */
+}
+
+.start-button:hover {
+    transform: translateY(-4px) scale(1.02); /* Sedikit terangkat dan membesar */
+    box-shadow: 0 12px 25px rgba(76, 175, 80, 0.6); /* Bayangan lebih kuat */
+}
+
+/* Circles (Warna Pink Lebih Pastel, Ukuran & Posisi Disesuaikan) */
+.circle {
+    position: absolute;
+    background-color: #f7d5e4; /* Pink pastel */
+    border-radius: 50%;
+    opacity: 0.7; /* Sedikit transparan */
+    filter: blur(5px); /* Efek blur agar lebih lembut */
+}
+
+.top-section .circle.right {
+    width: 280px;
+    height: 280px;
+    top: -120px;
+    right: -100px;
+}
+
+.bottom-section .circle.left {
+    width: 230px;
+    height: 230px;
+    bottom: -120px;
+    left: -100px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.8em;
+    }
+    .subtitle {
+        font-size: 1.6em;
+    }
+    .tagline {
+        font-size: 1.3em;
+    }
+    .start-button {
+        padding: 15px 45px;
+        font-size: 1.2em;
+    }
+    .icon-container .icon {
+        font-size: 2em;
+    }
+    .top-section .circle.right {
+        width: 200px; height: 200px; top: -80px; right: -70px;
+    }
+    .bottom-section .circle.left {
+        width: 170px; height: 170px; bottom: -80px; left: -70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    .subtitle {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+    .tagline {
+        font-size: 1em;
+        margin-top: 10px;
+    }
+    .start-button {
+        padding: 12px 35px;
+        font-size: 1em;
+        border-radius: 30px;
+    }
+    .icon-container {
+        top: 10px; left: 10px; gap: 10px;
+    }
+    .icon-container .icon {
+        font-size: 1.8em;
+    }
+    .icon-container.right {
+        right: 10px;
+    }
+    .top-section .circle.right {
+        width: 150px; height: 150px; top: -60px; right: -50px;
+    }
+    .bottom-section .circle.left {
+        width: 100px; height: 100px; bottom: -60px; left: -50px;
+    }
+}
